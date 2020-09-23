@@ -1,18 +1,17 @@
 <!--templates/home.html-->
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-    {% for post in post_list %}
-        <div class = "post-entry">
+    {% for post in posts_list %}
+        <div class="post-entry">
             <h2>
                 <a href="">{{post.title}}</a>
             </h2>
-            <p>
-                {{post.body}}
-            </p>
-            <p>
-                By: {{post.author}}
-            </p>
+
+            <p>{{post.body}}</p>
+
+            <p>By : {{post.author}}</p>
+            
         </div>
     {% endfor %}
 {% endblock content %}
